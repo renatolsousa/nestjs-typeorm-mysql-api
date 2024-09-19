@@ -12,7 +12,19 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository integrated with MySql via TypeOrm
+Project template built over [Nest](https://github.com/nestjs/nest) framework TypeScript as a starter repository integrated with MySql via TypeOrm.
+
+This project will cover:
+ - NestJs
+ - TypeOrm [MySql]
+ - Nest Guards
+ - Role Guards
+ - Server Sent Events
+ - Swagger Documentation
+ - Authenticated Routes
+ - User Registration
+ - User Login
+
 
 ## Installation
 
@@ -47,12 +59,19 @@ $ npm run test:cov
 ```
 
 ## Swagger Api documentation
+
 http://localhost:3000/docs
+
+
+## Database Seeding
+- By default, when the application starts, the **users/users.service.ts** will run **onModuleInt()** the **initDatabaseforUsage()** method that will populate the 2 first users for the system
 
 ## Support
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
 
+## Author
+ - Renato Sousa - Renatão
 
 ## License
 

@@ -17,8 +17,8 @@ export class UsersService implements OnModuleInit{
         private readonly configService: ConfigService
     ) {}
 
-    onModuleInit() {
-        this.initDatabaseforUsage();
+    async onModuleInit() {
+        await this.initDatabaseforUsage();
     }
 
     /**

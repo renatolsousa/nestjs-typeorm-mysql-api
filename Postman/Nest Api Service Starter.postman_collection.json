@@ -1,0 +1,192 @@
+{
+	"info": {
+		"_postman_id": "f8306e28-1ed6-417c-8652-246cd9c73828",
+		"name": "Nest Api Service Starter",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9736820"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "Authenticated",
+					"item": [
+						{
+							"name": "Create User",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJlbmF0b2xzb3VzYTMwQGdtYWlsLmNvbSIsInVpZCI6ImszMHQ0dmNvMGhnYjR0Nml1ZjkxM3QwbSIsInJvbGUiOiJhZG1pbiIsIm5hbWUiOiJSZW5hdG8iLCJpYXQiOjE3MjY3NDY5MjcsImV4cCI6MTcyNjgzMzMyN30.xsd6s31nx018eyDZHHjcYuy7h7CZW8SXvKhMHzWewCc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\":\"Renato\",\n    \"lastName\":\"Sousa\",\n    \"email\":\"renatao1@gmail.com\",\n    \"password\":\"devout06\",\n    \"role\":\"user\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/user/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"user",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Profile",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJlbmF0b2xzb3VzYTMwQGdtYWlsLmNvbSIsInVpZCI6ImszMHQ0dmNvMGhnYjR0Nml1ZjkxM3QwbSIsInJvbGUiOiJhZG1pbiIsIm5hbWUiOiJSZW5hdG8iLCJpYXQiOjE3MjY3NDY5MjcsImV4cCI6MTcyNjgzMzMyN30.xsd6s31nx018eyDZHHjcYuy7h7CZW8SXvKhMHzWewCc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/user/profile",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"user",
+										"profile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List  Users",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJlbmF0b2xzb3VzYTMwQGdtYWlsLmNvbSIsInVpZCI6ImszMHQ0dmNvMGhnYjR0Nml1ZjkxM3QwbSIsInJvbGUiOiJhZG1pbiIsIm5hbWUiOiJSZW5hdG8iLCJpYXQiOjE3MjY3NDY5MjcsImV4cCI6MTcyNjgzMzMyN30.xsd6s31nx018eyDZHHjcYuy7h7CZW8SXvKhMHzWewCc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/user/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"user",
+										"list"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Events",
+					"item": [
+						{
+							"name": "Events on Create User",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/events/service/emit/onCreateUser",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"events",
+										"service",
+										"emit",
+										"onCreateUser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listener events",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"renatolsousa30@gmail.com\",\n    \"password\": \"devout06\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
