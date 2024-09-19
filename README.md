@@ -64,7 +64,31 @@ http://localhost:3000/docs
 
 
 ## Database Seeding
-- By default, when the application starts, the **users/users.service.ts** will run **onModuleInt()** the **initDatabaseforUsage()** method that will populate the 2 first users for the system
+- By default, when the application starts, the **users/users.service.ts** will run **onModuleInit()** the **initDatabaseforUsage()** method that will populate the 2 first users for the system
+```typescript
+/**
+* Change your user data here 
+* or add more users if you want
+* During the seeding the password will be encrypted by 
+ - src/utils/password.bcrypt.ts
+**/
+export const usersSeeds = [
+    {
+        'firstName': 'Philip',
+        'lastName': 'Banks',
+        'email': 'philip.banks@gmail.com',
+        'password': '123456',
+        'role': 'admin'
+    },
+    {
+        'firstName': 'George',
+        'lastName': 'Banks',
+        'email': 'george.banks@gmail.com',
+        'password': '123456',
+        'role': 'user'
+    }
+]
+```
 
 ## Support
 
