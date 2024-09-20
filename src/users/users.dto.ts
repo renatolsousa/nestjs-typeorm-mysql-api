@@ -1,5 +1,9 @@
-import { IsEmail, IsNotEmpty, IsObject, IsString } from 'class-validator';
+import { IsEmail, IsEnum, IsNotEmpty, IsObject, IsString,  } from 'class-validator';
 import { ApiProperty } from 'src/utils/swagger.uitl';
+export enum Role {
+    'admin' = 'admin',
+    'user' = 'user'
+}
 
 export class CreateUserDto {
 
@@ -27,6 +31,7 @@ export class CreateUserDto {
     @ApiProperty()
     @IsString()
     @IsNotEmpty()
+    @IsEnum(Role)
     role: string;
 }
 

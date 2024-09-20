@@ -13,6 +13,7 @@ export class AppController {
       access: 'denied'
     };
   }
+  
   @Get('health')
   getHello(): object {
     return this.appService.healtCheck();

@@ -10,6 +10,7 @@ import { ApiResponse, ApiTags } from '@nestjs/swagger';
 import { ApiSwaggerResponse } from 'src/utils/swagger.uitl';
 import { EventsService } from 'src/events/events.service';
 
+
 @ApiTags('Users')
 @Controller('user')
 export class UsersController {
